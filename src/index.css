@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+  font-family: 'Poppins', sans-serif;
+  background: #2c3e50;
+}
+
+header {
+  text-align: center; /* Centra el texto del encabezado */
+  margin-bottom: 20px; /* Espacio inferior para el encabezado */
+  color: #fff; /* Color blanco para el encabezado */
+}
+
+.container {
+  display: flex; /* Flexbox para centrar los elementos */
+  align-items: center; /* Alinea verticalmente al centro */
+  justify-content: center; /* Centra horizontalmente */
+}
+
+input[type="file"] {
+  display: none; /* Oculta el input de archivo */
+}
+
+label {
+  display: inline-block;
+  text-transform: uppercase;
+  color: #fff;
+  background: #c0392b;
+  text-align: center;
+  padding: 15px 40px;
+  font-size: 18px;
+  letter-spacing: 1.5px;
+  user-select: none;
+  cursor: pointer;
+  box-shadow: 5px 15px 25px rgba(0, 0, 0, 0.35);
+  border-radius: 3px;
+}
+
+label i {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+label:active {
+  transform: scale(0.9);
+}
+
+/* Estilo para el input de tipo color */
+input[type="color"] {
+  -webkit-appearance: none; /* Para quitar el estilo por defecto en navegadores WebKit */
+  appearance: none;
+  width: 40px; /* Ancho del input de color */
+  height: 40px; /* Alto del input de color */
+  border: none; /* Sin borde */
+  border-radius: 50%; /* Hacerlo redondo */
+  cursor: pointer; /* Cambiar el cursor */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombra para un efecto 3D */
+  margin: 0 15px; /* Espaciado horizontal para centrarlo */
+  transform: translateY(5px); /* Ajustar la posición vertical del círculo */
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border: 2px solid #c0392b; /* Borde alrededor del color */
+  border-radius: 50%; /* Hacer el borde redondo */
+}
+
+input[type="color"]:focus {
+  outline: none; /* Sin contorno al enfocar */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra al enfocar */
+}
