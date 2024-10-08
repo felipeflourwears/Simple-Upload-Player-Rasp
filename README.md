@@ -40,7 +40,7 @@ Modify package.json
 # Site Depoly by Vercel
 
 ```bash
-https://clinquant-swan-1b49c4.netlify.app/
+https://simple-upload-player-rasp.vercel.app/
 ```
 
 [![Visit Site](https://img.shields.io/badge/Visit-Website-blue?style=for-the-badge)](https://simple-upload-player-rasp.vercel.app/)
