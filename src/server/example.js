@@ -12,3 +12,12 @@ const pool = mysql.createPool({
 
 // Exportar el pool para su uso en otros archivos
 export default pool;
+
+
+// .env EXAMPLE
+/*
+AWS_ACCESS_KEY_ID=your_key
+AWS_SECRET_ACCESS_KEY=your_secret_id
+AWS_REGION=your_region
+AWS_NAME_BUCKET=your_bucket
+*/

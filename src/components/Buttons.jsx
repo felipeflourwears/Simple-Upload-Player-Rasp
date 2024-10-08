@@ -1,13 +1,13 @@
 import { useState } from 'react';
 
 const Buttons = () => {
-  const [videoName, setVideoName] = useState('');
+  const [videoFile, setVideoFile] = useState(null);
   const [color, setColor] = useState('#FFFFFF');
 
   const handleFileChange = (event) => {
     const file = event.target.files[0];
     if (file) {
-      setVideoName(file.name); // Guardamos solo el nombre del archivo
+      setVideoFile(file); // Guardamos el archivo completo
     }
   };
 
@@ -16,21 +16,20 @@ const Buttons = () => {
   };
 
   const handleUpload = async () => {
-    if (!videoName) {
+    if (!videoFile) {
       alert('Por favor, selecciona un video.');
       return;
     }
 
+    const formData = new FormData();
+    formData.append('videoFile', videoFile); // Agrega el archivo de video
+    formData.append('color', color); // Agrega el color
+
+
     try {
       const response = await fetch('http://localhost:5000/upload', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          video: videoName, // Solo enviamos el nombre del video
-          color: color,
-        }),
+        body: formData, // Envía el FormData
       });
 
       if (!response.ok) {

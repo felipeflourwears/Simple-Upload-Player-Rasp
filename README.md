@@ -1,4 +1,14 @@
-# Package to run simultaneously
+## Install dotoenv
+```bash
+npm install dotenv
+```
+
+## Run Server
+```bash
+node src/server/server.js
+```
+
+### Package to run simultaneously
 ```bash
 npm install concurrently --save-dev
 ```
@@ -15,6 +25,16 @@ Modify package.json
 
 ```
 
+## SDK AWS
+```bash
+npm install aws-sdk
+```
+
+## Multer 
+It's a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+```bash
+npm install multer
+```
 
 
 # React + Vite
