@@ -76,3 +76,20 @@ input[type="color"]:focus {
   outline: none; /* Sin contorno al enfocar */
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Sombra al enfocar */
 }
+
+
+.submit-button {
+  padding: 10px 20px; /* Espaciado interno */
+  border: none; /* Sin borde */
+  border-radius: 4px; /* Esquinas redondeadas */
+  background-color: #6a5acd; /* Color de fondo morado *//* Color de fondo verde */
+  color: white; /* Color del texto */
+  font-size: 16px; /* Tamaño de fuente */
+  cursor: pointer; /* Cambia el cursor al pasar el ratón */
+  transition: background-color 0.3s ease; /* Transición suave */
+  margin-top: 10px; /* Margen superior para separación */
+}
+
+.submit-button:hover {
+  background-color: #483d8b; /* Color de fondo al pasar el ratón */
+}

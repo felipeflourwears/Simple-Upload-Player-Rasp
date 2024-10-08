@@ -61,7 +61,7 @@ const Buttons = () => {
           value={color}
           onChange={handleColorChange}
         />
-        <button onClick={handleUpload}>Submit</button>
+        <button className="submit-button" onClick={handleUpload}>Submit</button>
       </div>
     </div>
   );

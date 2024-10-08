@@ -1,14 +1,26 @@
-## Install dotoenv
+# APP Upload Video AWS --> DB SQL
+ Simple Upload Video on AWS Bucket to connect in DB from Hostinger
+
+## Install Packages
 ```bash
 npm install dotenv
+npm install aws-sdk
+npm install multer
 ```
+
+#### Multer 
+It's a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
+
+#### dotenv
+Environment variables to ignore on Github
+
 
 ## Run Server
 ```bash
 node src/server/server.js
 ```
 
-### Package to run simultaneously
+### Package to run simultaneously(not necessary)
 ```bash
 npm install concurrently --save-dev
 ```
@@ -25,17 +37,10 @@ Modify package.json
 
 ```
 
-## SDK AWS
-```bash
-npm install aws-sdk
-```
+## Screenshots
 
-## Multer 
-It's a node.js middleware for handling multipart/form-data, which is primarily used for uploading files. It is written on top of busboy for maximum efficiency.
-```bash
-npm install multer
-```
-
+### Main Screen
+<img src="stuff/img/screen.png" alt="main" width="900" height="400">
 
 # React + Vite
 

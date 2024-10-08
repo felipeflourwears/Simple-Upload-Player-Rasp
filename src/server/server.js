@@ -29,10 +29,24 @@ const PORT = 5000;
 app.use(cors());
 app.use(bodyParser.json()); // Para parsear cuerpos JSON
 
+
+// Función para convertir hexadecimal a RGB
+const hexToRgb = (hex) => {
+    hex = hex.replace(/^#/, '');
+    const bigint = parseInt(hex, 16);
+    const r = (bigint >> 16) & 255;
+    const g = (bigint >> 8) & 255;
+    const b = bigint & 255;
+  
+    return `${r}, ${g}, ${b}`;
+};
+
 // Endpoint POST para manejar la carga de videos y colores
 app.post('/upload', upload.single('videoFile'), async (req, res) => {
-    const color = req.body.color;
+    const color_received = req.body.color;
     const videoFile = req.file;
+    const color = hexToRgb(color_received); // Convierte a RGB
+
     console.log(`Received request to upload video: ${videoFile.originalname}, color: ${color}`); // Use originalname instead of name
 
     const url = "https://mediapopa.s3.amazonaws.com/" + videoFile.originalname;
